@@ -1,41 +1,206 @@
 <!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Aravinth Sadagopan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <h1>Aravinth Sadagopan</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the homepage of my website.</p>
-    </section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>About me and my work.</p>
-    </section>
+<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact me via email: <a href="mailto:yourname@example.com">yourname@example.com</a>.</p>
-    </section>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="#Current_Projects">Projects</a></li>
+				  <li><a href="#publications">Publications</a></li> 
+				  <li><a href="#">CV</a></li> 
+		  </ul>
+		</div>
+	  </div>
+	</nav>
 
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+  <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-md-4">
+                <img src="Pics/Profile-pic-min.jpg" alt="Holograms" width="180" height="220"><br>
+                <div style="font-family: 'Arial', sans-serif; font-size: 24px;"><b>Aravinth Sadagopan</b></div><br>
+                Department of Aerospace Engineering<br>
+                The Pennsylvania State University<br>
+                University Park, PA <br>
+                USA<br>
+                </p>
+            </div>
+            
+          
+            
+               <div class="col-md-6" style="height: 28vh;">
+                <div style="margin-top:5%; text-align:justify;"> 
+                <p> Hi ! I am a final year Ph. D. student looking for opportunities to work at the intersection of data-driven modeling of dynamical systems and fluid dynamics. </p>
+                
+                <div style="margin-top:10%; text-align:justify;">     
+                  <h1> <strong style="font-size: 20px;">  Research Interests </strong><br/> </h1>
+                  <li>Fluid dynamics: Compressible flows; Turbomachinery; Flow control; High-performance computing; Hydrodynamic stability analysis </li>
+                  <li>Aerothermoelasticity: Multi-physics; Numerical methods; Heat transfer; Fluid-thermal-structure interaction </li>
+                  <li>Machine learning: Dynamical systems; Model-order reduction; Deep learning</li>
+                </div>
+                </div> 
+                <!-- Links on the Sidebar -->
+                <div class="col-md-4" style="margin-top:5%">
+                  <dd><a href="https://scholar.google.com/citations?user=9gfgnQ4AAAAJ&hl=en">Google Scholar</a></dd> 
+                  <dd><a href="https://www.linkedin.com/in/aravinthsadagopan/?trk=public-profile-join-page">LinkedIn</a></dd>
+                </div>
+       </div> 
+      </div>
+
+      <div class="container">
+        <h2 id="Current_Projects">Current projects</h2>
+        <div style="margin-top:3%; text-align:justify;">  
+  
+        <div class="row">
+          <!-- Image Column -->
+          <div class="col-md-8" style="height: 26vh;">
+            <strong style="font-size: 20px;"> Data-driven resolvent analysis</strong><br/>
+
+            <p>It is crucial to understand the energy transfer mechanism of oscillatory fluid flows to examine efficient flow control strategies. Based on the earlier works of Padovan et al (2020 JFM) and Herrmann et al (2021 JFM), we want to extract the input-output modes of quasi-periodic systems directly from the data. This would be beneficial while handling experimental data where one does not have access to the adjoint, typically available in the traditional operator-based approaches. The objective is to perform dimension reduction followed by operator inference to extract a linear quadratic system and construct the harmonic resolvent operator. The results highlight input-output relationship for a forced dynamical system exhibiting a limit cycle. Further theoretical formulation is under works to preserve the spectral properties of the reduced-order model for accurate characterization of input-output dynamics.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="Pics/DDHR-IO.png" alt="Placeholder Image" width="220" height="200">
+          </div>
+          <!-- Text Column -->
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-8" style="height: 26vh;">
+          <strong style="font-size: 20px;"> Noise prediction of supersonic jet flows </strong><br/>
+
+          <p>Aeroacoustic prediction </p>
+        </div>
+        <div class="col-md-4">
+          <img src="Pics/Jet_exhaust.gif" alt="Placeholder Image" width="230" height="100">
+        </div>
+        <!-- Text Column -->
+      </div>
+
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-8" style="height: 26vh;">
+          <strong style="font-size: 20px;"> Global stability analysis of compressible shear layers on cone-slice-ramp</strong><br/>
+
+          <p>The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. <!--The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.--></p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://via.placeholder.com/150" class="img-responsive" alt="Placeholder Image">
+        </div>
+        <!-- Text Column -->
+      </div>
+
+      <h2 id="Past Projects">Past projects</h2>
+      <div style="margin-top:3%; text-align:justify;">  
+
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-8" style="height: 26vh;">
+          <strong style="font-size: 20px;"> Fluid-thermal structural interaction of cone-slice-ramp in hypersonic flows</strong><br/>
+
+          <p> We explore the aerothermoelastic behavior of a complex geometry, i.e., cone-slice-ramp, in the air-breathing hypersonic regime. The objective is to discover the interaction mechanism of the multi-physics problem and develop reduced-order models for multi-disciplinary design evaluation and trajectory prediction. The challenge lies in resolving the 109 order of magnitude difference in the temporal decomposition of the events across fluid, and thermo-structural domains, which makes it computationally intractable to predict the aerothermoelastic behavior of a complex geometry of the entire flight trajectory (~10 min). A partition-based explicitly coupled high-fidelity numerical framework is validated against the experimental data for FTSI analysis of the cone-slice-ramp. The results revealed a fluid-dominant one-way coupling for the high ramp angle case. Based on this, a simplified thermos-structural solver is developed based on heat equation (shell-element based FEM) and modal solver (Rayleigh-Ritz). </p>
+        </div>
+        <div class="col-md-4" style="height: 26vh;">
+          <img src="Pics/NS.gif" alt="Placeholder Image" width="300" height="100">
+        </div>
+        <!-- Text Column -->
+      </div>
+
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-8" style="height: 26vh;">
+          <strong style="font-size: 20px;"> Computational analysis of the PSU AFTRF single stage HP-turbine  </strong><br/>
+
+          <p> The tip leakage flow contributes roughly 10-15 % of overall turbine stage loss. To develop efficient tip designs, my objective was to validate the computational model of a high-pressure (HP) Turbine stage at PSU-AFTRF experimental facility with RANS using STAR-CCM+. The computational model was used to characterize aerothermal losses due to tip leakage, and secondary flows in the blade passage. Various inter-stage interfacing methods (mixing plane, sliding mesh, and harmonic balance method) and boundary-layer transition models were explored. The location of boundary layer transition on the nozzle guide vane was identified as a key factor to accurately predict the tip leakage flow.  </p>
+        </div>
+        <div class="col-md-4" style="height: 26vh;">
+          <img src="Pics/AFTRF-turbine.png" alt="Placeholder Image" width="200" height="200">
+        </div>
+        <!-- Text Column -->
+      </div>
+
+      
+
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-8" style="height: 26vh;">
+          <strong style="font-size: 20px;"> Design of a high-pressure ratio mixed flow compressor for small jet-engines </strong><br/>
+
+          <p> We propose a single-stage high-pressure ratio compressor using first-order principles to address the surging demand in the small aircraft engine segment (1-10 kg/s). The design is optimized, validated and examined for the flow physics with the RANS-based CFD in STAR-CCM+. A design point pressure ratio of 5.83 with 75.5% efficiency at 3.5Kg/s was achieved within 0.4m frontal diameter (higher performance than existing MFCs in the open literature). </p>
+        </div>
+        <div class="col-md-4" style="height: 26vh;">
+          <img src="Pics/MFC.jpg"  alt="Placeholder Image" class="img-responsive">
+        </div>
+        <!-- Text Column -->
+      </div>
+    </div>
+
+
+    
+  
+            <!-- Publications -->
+            <div class="col-md-8" style="height: 10vh;">    
+                <h2 id="publications">Publications</h2>
+                
+                <strong>Peer-reviewed</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+                </ul>
+            
+                <strong>Technical Reports</strong><br/>
+                <ul>
+                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+    
+    <!-- Other people may like it too! -->
+    <!-- style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> -->
+    
 </body>
+
 </html>
