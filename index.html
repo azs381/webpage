@@ -14,6 +14,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <script src="https://www.w3schools/com/lib/w3data.js"></script>
+  <script src="jquery.js"></script>
+  <script>$(function(){$("#navbar_").load("navbar.html");
+  });
+  </script>
   <style>
     body {
       background-color: rgb(255, 255, 255);
@@ -21,10 +26,12 @@
   </style>
 </head>
 <body>
+  <div id="navbar_"></div>
+
 
 
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<!--<nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="background-color: #485549; border-color: #4CAF50;">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,22 +40,27 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
 					</button>
-		</div>
+		</div>-->
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<!-- Collect the nav links, forms, and other content for toggling 
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#Current_Projects">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
-          <li><a href="Talks.html"target="_blank">Talks</a></li> 
+				  <li><a href="index.html" style="color: rgb(193, 192, 192);">Home</a></li>
+				  <li><a href="index.html"  style="color: rgb(193, 192, 192);">Projects</a></li>
+				  <li><a href="https://scholar.google.com/citations?user=9gfgnQ4AAAAJ&hl=en"target="_blank"  style="color: rgb(193, 192, 192);">Publications</a></li> 
+				  <li><a href="CV-Aravinth-2024-V5.pdf"  style="color: rgb(193, 192, 192);"target="_blank" >CV </a></li> 
+          <li><a href="Talks.html"  style="color: rgb(193, 192, 192);">Talks</a></li> 
+          <li><a href="Software.html"  style="color: rgb(193, 192, 192);">Software</a></li>
 		  </ul>
 		</div>
 	  </div>
-	</nav>
+	</nav>-->
 
+  <div w3-include-html="navbar.html"></div>
+
+  <script>w3includeHTML();</script>
   <!-- Page Content -->
     <div class="container">
 
@@ -56,7 +68,7 @@
 <!-- width="160" height="220"-->
             <!-- Entries Column -->
             <div class="col-md-4">
-                <img src="Pics/Pic-profile-casual_cleanup-Photoroom.jpg" class="img-responsive" text-align: center; alt="Holograms" width="40%" height="auto"><br>
+                <img src="Pics/Profile-pic-min.jpg" class="img-responsive" text-align: center; alt="Holograms" width="40%" height="auto"><br>
                 <div style="font-family: 'Arial', sans-serif; font-size: 24px;"><b>Aravinth Sadagopan</b></div><br>
                 <i>Department of Aerospace Engineering</i><br>
                 <i>The Pennsylvania State University</i><br>
@@ -74,7 +86,7 @@
                 <ul class="a">
                   <h1> <strong style="font-size: 20px;">  Research Interests </strong><br/> </h1>
                   <li>Fluid dynamics: Compressible flows; Turbomachinery; Flow control; Hydrodynamic stability analysis </li>
-                  <li>Multi-physics; Aerothermoelasticity; Numerical methods; Heat transfer  </li>
+                  <li>Multi-physics: Aerothermoelasticity; Numerical methods; Heat transfer  </li>
                   <li>Model-order reduction: Dynamical systems; Deep learning</li>
                   <li>High-performance computing</li>
                 </div>
@@ -93,7 +105,7 @@
         <div class="row">
           <!-- Image Column -->
           <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
-            <strong style="font-size: 20px;"> Data-driven resolvent analysis</strong><br/>
+            <strong style="font-size: 20px;"> Data-driven input-output analysis of dynamical systems</strong><br/>
 
             <p>It is crucial to understand the energy transfer mechanism of oscillatory fluid flows to examine efficient flow control strategies. Based on the earlier works of Padovan et al (2020 JFM) and Herrmann et al (2021 JFM), we want to extract the input-output modes of quasi-periodic systems directly from the data. This would be beneficial while handling experimental data where one does not have access to the adjoint, typically available in the traditional operator-based approaches. The objective is to perform dimension reduction followed by operator inference to extract a linear quadratic system and construct the harmonic resolvent operator. The results highlight input-output relationship for a forced dynamical system exhibiting a limit cycle. Further theoretical formulation is under works to preserve the spectral properties of the reduced-order model for accurate characterization of input-output dynamics.</p>
           </div>
@@ -125,10 +137,10 @@
         <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
           <strong style="font-size: 20px;"> Global stability analysis of compressible shear layers on cone-slice-ramp</strong><br/>
            <div style="text-align:justify;">
-          <p>The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. <!--The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.--></p>
+          <p> The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. <!--The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.--></p>
         </div></div>
         <div class="col-md-4">
-          <img src="https://via.placeholder.com/150" class="img-responsive" alt="Placeholder Image">
+          <img src="Pics/NPR_1p39_coarse_LES_uns_6899.png" class="img-responsive" alt="Placeholder Image">
         </div>
         <!-- Text Column -->
       </div>
@@ -181,7 +193,7 @@
 
     
   
-            <!-- Publications -->
+            <!-- Publications 
             <div class="col-md-8" style="height: 30vh;">    
                 <h2 id="publications">Publications</h2>
                 
@@ -200,7 +212,7 @@
         </div>
 
 
-    </div>
+    </div> -->
     <!-- /.container -->
     <div class="container">
 
