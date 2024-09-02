@@ -15,6 +15,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <script src="https://www.w3schools/com/lib/w3data.js"></script>
+  <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="jquery.js"></script>
   <script>$(function(){$("#navbar_").load("navbar.html");
   });
@@ -101,9 +103,9 @@
       <div class="container">
         <h2 id="Current_Projects">Current projects</h2>
         <div style="margin-top:1%; text-align:justify;">  
-  
-        <div class="row">
-          <!-- Image Column -->
+   
+        <!--<div class="row">
+           Image Column 
           <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
             <strong style="font-size: 20px;"> Data-driven input-output analysis of dynamical systems</strong><br/>
 
@@ -115,12 +117,12 @@
             <img src="Pics/DDHR-IO.png" alt="Placeholder Image" 
             width="220" height="auto">
           </div>
-          <!-- Text Column -->
+           Text Column
         </div>
-      </div>
-
-      <div class="row">
-        <!-- Image Column -->
+      </div> -->
+   
+       <!--  <div class="row">
+       Image Column
         <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
           <strong style="font-size: 20px;"> Noise prediction of supersonic jet flows </strong><br/>
 
@@ -129,34 +131,40 @@
         <div class="col-md-4">
           <img src="Pics/NPR_1p39_coarse_LES_uns_6899.png" alt="Placeholder Image" width="230" height="100">
         </div>
-        <!-- Text Column -->
-      </div>
+        Text Column 
+      </div> -->
 
-      <div class="row">
-        <!-- Image Column -->
+      <!-- <div class="row">
+         Image Column 
         <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
           <strong style="font-size: 20px;"> Global stability analysis of compressible shear layers on cone-slice-ramp</strong><br/>
            <div style="text-align:justify;">
-          <p> The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. <!--The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.--></p>
+          <p> The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.</p>
         </div></div>
         <div class="col-md-4">
           <img src="Pics/NPR_1p39_coarse_LES_uns_6899.png" class="img-responsive" alt="Placeholder Image">
         </div>
-        <!-- Text Column -->
-      </div>
-
+         Text Column 
+      </div>-->
+    
       <h2 id="Past Projects">Past projects</h2>
       <div style="margin-top:3%; text-align:justify;">  
 
       <div class="row">
         <!-- Image Column -->
-        <div class="col-md-8" style="height: 26vh;">
+        <div class="col-md-8" style="height: 30vh;">
           <strong style="font-size: 20px;"> Fluid-thermal structural interaction of cone-slice-ramp in hypersonic flows</strong><br/>
 
-          <p> We explore the aerothermoelastic behavior of a complex geometry, i.e., cone-slice-ramp, in the air-breathing hypersonic regime. The objective is to discover the interaction mechanism of the multi-physics problem and develop reduced-order models for multi-disciplinary design evaluation and trajectory prediction. The challenge lies in resolving the 109 order of magnitude difference in the temporal decomposition of the events across fluid, and thermo-structural domains, which makes it computationally intractable to predict the aerothermoelastic behavior of a complex geometry of the entire flight trajectory (~10 min). A partition-based explicitly coupled high-fidelity numerical framework is validated against the experimental data for FTSI analysis of the cone-slice-ramp. The results revealed a fluid-dominant one-way coupling for the high ramp angle case. Based on this, a simplified thermos-structural solver is developed based on heat equation (shell-element based FEM) and modal solver (Rayleigh-Ritz). </p>
+          <p>    We explore the aerothermoelastic behavior of a complex geometry, i.e., cone-slice-ramp, in the air-breathing hypersonic regime. The objective is to discover the interaction mechanism of the multi-physics problem and develop reduced-order models for multi-disciplinary design evaluation and trajectory prediction. The challenge lies in resolving the \(10^9\) order of magnitude difference in the temporal decomposition of the events across fluid, and thermo-structural domains, which makes it computationally intractable to predict the aerothermoelastic behavior of a complex geometry of the entire flight trajectory (~\(10\) min). A partition-based explicitly coupled high-fidelity numerical framework is validated against the experimental data for FTSI analysis of the cone-slice-ramp. The results revealed a fluid-dominant one-way coupling for the high ramp angle case. Based on this, a simplified thermos-structural solver is developed based on heat equation (shell-element based FEM) and modal solver (Rayleigh-Ritz). </p>
+          <ul>
+            <li>Sadagopan, A., Huang, D., Jirasek, A., Seidel, J., Pandey, A., Casper, K., “ Hypersonic Fluid–Thermal–Structural
+              Interaction of Cone–Slice–Ramp: Computations with Experimental Validation,” AIAA Journal, 2023.
+              DOI:10.2514/1.J062326</li>
+          </ul>
         </div>
-        <div class="col-md-4" style="height: 26vh;">
-          <img src="Pics/NS.gif" alt="Placeholder Image" width="300" height="100">
+
+        <div class="col-md-4" style="height: 30vh;">
+          <img src="Pics/Pic-FTSI.png" alt="Placeholder Image"class="img-responsive">
         </div>
         <!-- Text Column -->
       </div>
@@ -164,12 +172,12 @@
       <div class="row">
         <!-- Image Column -->
         <div class="col-md-8" style="height: 26vh;">
-          <strong style="font-size: 20px;"> Computational analysis of the PSU AFTRF single stage HP-turbine  </strong><br/>
+          <strong style="font-size: 20px;"> Computational validation of the PSU AFTRF single stage high-pressure turbine  </strong><br/>
 
-          <p> The tip leakage flow contributes roughly 10-15 % of overall turbine stage loss. To develop efficient tip designs, my objective was to validate the computational model of a high-pressure (HP) Turbine stage at PSU-AFTRF experimental facility with RANS using STAR-CCM+. The computational model was used to characterize aerothermal losses due to tip leakage, and secondary flows in the blade passage. Various inter-stage interfacing methods (mixing plane, sliding mesh, and harmonic balance method) and boundary-layer transition models were explored. The location of boundary layer transition on the nozzle guide vane was identified as a key factor to accurately predict the tip leakage flow.  </p>
+          <p> Efficiency of a gas-turbine engine is critical given its worldwide usage across several sectors. Its performance is directly proportional to operational costs, fuel consumption and environmental sustainability. Especially in aviation, even a \(1\%\) improvement will lead to savings in several millions of dollars. In this context, the tip leakage contributes roughly \(1/3^{th}\) of overall turbine aerodynamic loss. Therefore, the objective was to develop efficient tip designs to improve the design efficiency. Leveraging computational fluid dynamics, the computational model of a high-pressure (HP) Turbine stage at the PSU-AFTRF experimental facility was validated using steady-state RANS. The computational model was used to characterize aerothermal losses due to tip leakage, and secondary flows in the blade passage. <!--Various inter-stage interfacing methods (mixing plane, sliding mesh, and harmonic balance method) and boundary-layer transition models were explored.--> The location of boundary layer transition on the nozzle guide vane was identified as a key factor to accurately predict the tip leakage flow.  </p>
         </div>
         <div class="col-md-4" style="height: 26vh;">
-          <img src="Pics/AFTRF-turbine.png" alt="Placeholder Image" width="200" height="200">
+          <img src="Pics/AFTRF-turbine.png" alt="Placeholder Image" class="img-responsive">
         </div>
         <!-- Text Column -->
       </div>
@@ -182,9 +190,17 @@
           <strong style="font-size: 20px;"> Design of a high-pressure ratio mixed flow compressor for small jet-engines </strong><br/>
 
           <p> We propose a single-stage high-pressure ratio compressor using first-order principles to address the surging demand in the small aircraft engine segment (1-10 kg/s). The design is optimized, validated and examined for the flow physics with the RANS-based CFD in STAR-CCM+. A design point pressure ratio of 5.83 with 75.5% efficiency at 3.5Kg/s was achieved within 0.4m frontal diameter (higher performance than existing MFCs in the open literature). </p>
+
+          <ul>
+            <li>Sadagopan, A., Camci, C., “A design strategy for a 6:1 supersonic mixed flow compressor”, Aerospace Science
+              and Technology, Elsevier, 2019. DOI:10.1016/j.ast.2019.02.026 </li>
+            <li> Sadagopan, A., Camci, C., “Viscous flow and performance issues in a 6:1 supersonic mixed-flow compressor with
+              a tandem diffuser”, Aerospace Science and Technology, Elsevier, 2019. DOI:10.1016/j.ast.2019.02.027</li>
+          </ul>
+
         </div>
         <div class="col-md-4" style="height: 26vh;">
-          <img src="Pics/MFC.jpg"  alt="Placeholder Image" class="img-responsive">
+          <img src="Pics/MFC.png"  alt="Placeholder Image" class="img-responsive">
         </div>
         <!-- Text Column -->
       </div>
