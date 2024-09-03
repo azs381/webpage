@@ -27,6 +27,17 @@
     }
   </style>
 </head>
+
+@media only screen and (max-width: 480px) {
+  #id_8 {
+      width: 250px;  
+      left: 0;
+      right: 0;
+        margin: auto;
+  }
+  
+  }
+
 <body>
   <div id="navbar_"></div>
 
@@ -135,21 +146,27 @@
         Text Column 
       </div> -->
 
-      <!-- <div class="row">
-         Image Column 
-        <div class="col-md-8" style="height: 26vh;margin-top:3%; text-align:justify;">
-          <strong style="font-size: 20px;"> Global stability analysis of compressible shear layers on cone-slice-ramp</strong><br/>
-           <div style="text-align:justify;">
-          <p> The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism to establish flow control. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. Therefore, we develop a local and global stability analysis framework based on spectral and finite difference-based methods to discretize the linear operator and extract the unstable modes. The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.</p>
-        </div></div>
-        <div class="col-md-4">
-          <img src="Pics/NPR_1p39_coarse_LES_uns_6899.png" class="img-responsive" alt="Placeholder Image">
-        </div>
-         Text Column 
-      </div>-->
+
     
       <h2 id="Past Projects">Past projects</h2>
        <div style="margin-top:3%; text-align:justify;">  
+
+
+         <div class="row">
+        <div class="col-md-8" style="height: 30vh;margin-top:0%; text-align:justify;">
+          <strong style="font-size: 20px;"> Compressible shear layer dynamics of compression-ramp type geometries in high-speed flows</strong><br/>
+          <p> The thermo-structural response of a high-speed vehicle at concave/convex junctions (due to shock-wave boundary layer interaction) is excited by the unsteady flow in the low-frequency spectrum. They overlap with the structural frequencies compelling the need to understand the causal mechanism of the fluid system. Unfortunately, the space-time decomposition of such flow features often requires a long runtime, and complex geometries, such as the cone-slice-ramp comprise a high-dimensional state space making it computationally intractable. The linear operators of local and bi-global coordinates are probed to extract the unstable modes and establish physical mechanism driving the fluid unsteadiness. <!--The baseflow is computed using STAR-CCM+ and the linear operators constructed using a production level code built in MATLAB for sequential computation. Extension of the framework to perform global resolvent analysis and parallelization is ongoing using C, MPI and MUMPS.--></p>
+            <ul>
+              <li>
+                Sadagopan, A., Huang, D., Pandey, A., Casper, K., DeChant, L., “Compressible shear layer dynamics of a cone-slice-ramp in high-speed flows”, submitted.
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3" style="height: 30vh;">
+          <img src="Pics/Pic-SLO.png" class="img-responsive" alt="Placeholder Image">
+        </div> 
+      </div>
+
 
       <div class="row">
         <!-- Image Column -->
